@@ -1,11 +1,1 @@
-test by sam
-more text
-<<<<<<< Updated upstream
-Github sucks
-=======
-<<<<<<< HEAD
-test
-=======
-Github sucks
->>>>>>> origin/master
->>>>>>> Stashed changes
+sam test
