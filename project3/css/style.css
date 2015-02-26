@@ -1,0 +1,45 @@
+header{
+    outline: 2px solid red;    
+}
+header a{
+    outline: 2px solid black;
+    margin: 0;
+}
+header h1 a img{
+    outline: 2px solid purple;
+    float: left;
+    width: 6em;
+    padding: 1em 0;
+}
+section{
+    outline: 2px solid green;
+    clear: both;
+} 
+section:first-of-type h1{
+    text-align: center;
+}
+section:nth-of-type(2) h2{ 
+    text-align: center;
+}
+button{
+    outline: 2px solid blue;
+    width: 10em;
+    margin: 1em 9em;
+    padding: 1em;
+    
+} 
+section:last-of-type a img{
+    putline: 2px solid pink;
+    margin: 0 0.5em;
+}
+footer{
+    outline: 2px solid orange;
+    margin-left: -1.75em;
+}
+nav ul li{
+    outline: 2px solid yellow;  
+    list-style: none;
+    display: block;
+    float: left;
+    padding: 0 0.3em;
+}
