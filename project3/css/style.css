@@ -1,8 +1,20 @@
+/*
+    COLORS FOR THE SITE
+        GREEN: #64A70B;
+        BLUE: #004B87;
+        DARK GREY: #333F48;
+
+    THE BUTTON
+        GREEN: SAME;
+        BORDER-BOTTOM: #4B8008;
+        border-radius: 5px;
+*/
+
+
 header{
     outline: 2px solid red;    
 }
 header a{
-    outline: 2px solid black;
     margin: 0;
 }
 header h1 a img{
