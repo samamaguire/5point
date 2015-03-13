@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Effects</title>
+    <style>
+        body {
+            font-family: serif;
+        }
+
+        section {
+            display: inline-block;
+        }
+        p {
+            height: 100px;
+            width: 100px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        section:nth-of-type(1) p {
+            background-color: red;
+            display: none;
+        }
+        section:nth-of-type(2) p {
+            background-color: blue;
+            display: none;
+        }
+        section:nth-of-type(3) p {
+            background-color: green;
+        }
+        section:nth-of-type(4) p {
+            background-color: orange;
+        }
+        button {
+            display: block; 
+            padding: 0.75em; 
+            background-color: black; 
+            border: 0;
+            color: white; 
+            font-weight: bold; 
+            border-radius: 5px;
+        }
+        .onoff {
+            background-color: red;
+        }
+    </style>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //STEP 1: jQuery can show or hide content instantaneously with .show() or .hide(). Try slow, normal, fast, or specifying milliseconds. Also try the reverse by first setting the CSS for this element to display: none; above.            
+            $("#showhide").click(function(){
+                $(this).prev().show("fast");
+            });
+            //STEP 2: .slideDown() and .slideUp() show and hide content, respectively, by rapidly making changes to an element's CSS height property. Similarly .fadeIn() and .fadeOut() show and hide content, respectively, by rapidly making changes to an element's CSS opacity property. Also try the reverse of each by first setting the CSS for this element to display: none; above.             
+            $("#fadeslide").click(function(){
+                $(this).prev().fadeOut("fast");
+            });
+            //STEP 3: .toggle() will show content that is currently hidden and hide content that is currently visible. You can pass the same arguments to .toggle() as you pass to any of the effects methods above. .toggle() will use a combination of slide and fade effects, just as .show() and .hide() do. You can toggle the display of content with just a slide or a fade using .slideToggle() and .fadeToggle().             
+            $("#toggle").click(function(){
+                $(this).prev().toggle();
+            });
+            //STEP 4: .toggle() will show content that is currently hidden and hide content that is currently visible. You can pass the same arguments to .toggle() as you pass to any of the effects methods above. .toggle() will use a combination of slide and fade effects, just as .show() and .hide() do. You can toggle the display of content with just a slide or a fade using .slideToggle() and .fadeToggle().             
+            $("#after").click(function(){
+                $(this).prev().fadeToggle(5000, function(){
+                    $("#after").toggleClass("onOff");
+                });
+            });
+            //STEP 5: Create a button to stop all animations on the page. Set the previous fade to 5000ms and stop the animation.
+            $("<button type='button' style='margin-top: 1em'></button>")
+                .text("Stop all animations")
+                .on("click", function(){
+                    $("body *").filter(":animated").stop();
+                }).appendTo(document.body);
+            //This exercise adapted from the excellent tutorial at http://learn.jquery.com/effects/intro-to-effects/
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery Effects</h1>
+    <section>
+        <p>Show/Hide</p>
+        <button id="showhide">Go</button>
+    </section>
+    <section>
+        <p>Fade/Slide</p>
+        <button id="fadeslide">Go</button>
+    </section>
+    <section>
+        <p>Toggle</p>
+        <button id="toggle">Go</button>
+    </section>
+    <section>
+        <p>Do After</p>
+        <button id="after">Go</button>
+    </section>
+</body>
+</html>
