@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Shanaly Aitchison</title>
+<style>
+    body {
+            font-family: sans-serif;
+        }
+        section {
+            border: 5px dashed #CCC;
+            width: 800px;
+            height: 500px;
+            padding: 50px;
+            background-image: url(end-result-transform3d.png);
+			 perspective-origin:left center;
+			perspective:300px;
+        }
+        p {
+            height: 100px;
+            width: 100px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+            opacity: 0.7;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+        section:hover p {
+			
+
+        }
+        
+        p:nth-of-type(1) {
+            background-color: blue;
+				transform: translate3d(0, 300px, 80px) rotateY(-90deg); 
+				/* x-axis, y-axis and the z-axis is the last */
+		}
+
+        p:nth-of-type(2) {
+            background-color: green;
+		transform: translate3d(0, 150px, 80px) rotateY(-90deg); 		
+        }
+        p:nth-of-type(3) {
+            background-color: orange;
+			transform: translate3d(0, 300px, 80px) rotateY(-90deg); 
+
+        }
+		/* ----   hover effects --- */
+		 p:nth-of-type(1):hover {
+            background-color: blue;
+				transform: translate3d(0, 300px, 80px) rotateY(-70deg); 
+		}
+
+        p:nth-of-type(2):hover {
+            background-color: green;
+		    transform: translate3d(0, 150px, 80px) rotateY(-40deg); 		
+        }
+        p:nth-of-type(3):hover {
+            background-color: orange;
+			transform: translate3d(0, 300px, 80px) rotateY(-40deg); 
+
+        }
+</style>
+</head>
+
+<body>
+<section>
+        
+        <p>About Me</p>
+        <p>Portfolio</p>
+        <p>Contact</p>
+    </section>
+    <footer>Copyright 2015 &copy;</footer>
+</body>
+</html>
